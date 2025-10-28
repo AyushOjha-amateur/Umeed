@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>STRESS MANAGE - UMEED</title>
+  <link rel="stylesheet" href="management.css"/>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav class="simple-nav">
+      <button onclick="window.location.href='index.html'" class="back-btn">← Back</button>
+      <h2>🧘‍♀️ Stress Management System</h2>
+    </nav>
+  </header> 
+
+  <main class="module-page">
+    <section class="stress-section" id="stressSection">
+      <div class="stress-container">
+        <h2>🧠 Calm the racing mind 🧠</h2>
+        <div class="question-box">
+          <h3>💭 How are you feeling right now?</h3>
+          <div class="options">
+            <button class="option-btn" onclick="showSuggestion('low')">😔 I feel very low and tired</button>
+            <button class="option-btn" onclick="showSuggestion('hopeless')">😰 I feel hopeless about the future</button>
+            <button class="option-btn" onclick="showSuggestion('stressed')">😵 I feel stressed and cannot focus</button>
+            <button class="option-btn" onclick="showSuggestion('anger')">😤 I feel angry and frustrated</button>
+            <button class="option-btn" onclick="showSuggestion('anxious')">😰 I feel anxious and worried</button>
+            <button class="option-btn" onclick="showSuggestion('silent')">😶 I feel like I don't want to talk to anyone</button>
+            <button class="option-btn" onclick="showSuggestion('sleeping')">😵 I'm having trouble sleeping</button>
+            <button class="option-btn" onclick="showSuggestion('conflict')">😵 I'm having conflict in my relationship</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <div id="suggestionModal" class="modal-overlay hidden">
+    <div class="modal-content">
+      <button class="modal-close-btn" onclick="closeSuggestionModal()">&times;</button>
+      <h3 id="modalTitle">Suggestion</h3>
+      <div id="modalText"></div>
+      <button class="cta-button modal-footer-btn" onclick="closeSuggestionModal()">Got it!</button>
+    </div>
+  </div>
+</body>
+</html>

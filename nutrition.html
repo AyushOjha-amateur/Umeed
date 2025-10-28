@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NUTRITION & DIET - UMEED</title>
+  <link rel="stylesheet" href="nutrition.css"/>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav class="simple-nav">
+      <button onclick="window.location.href='index.html'" class="back-btn">← Back</button>
+      <h2>🍎 Nutrition & Diet</h2>
+    </nav>
+  </header>
+
+  <main class="module-page">
+    <section class="nutrition-section">
+      <div class="nutrition-container">
+        <h2>🥦 Nourish Your Mind & Body 🥦</h2>
+
+        <div class="question-box">
+          <h3>Choose your meal type:</h3>
+          <div class="toggle-buttons">
+            <button id="vegBtn" class="toggle-btn active" onclick="setType('veg')">🥗 Vegetarian</button>
+            <button id="nonvegBtn" class="toggle-btn" onclick="setType('nonveg')">🍗 Non-Vegetarian</button>
+          </div>
+        </div>
+
+        <div class="question-box">
+          <h3>What’s your current goal?</h3>
+          <div class="options">
+            <button class="option-btn" onclick="showDish('energy')">⚡ Boost Energy</button>
+            <button class="option-btn" onclick="showDish('focus')">🧠 Improve Focus</button>
+            <button class="option-btn" onclick="showDish('sleep')">🌙 Sleep Better</button>
+            <button class="option-btn" onclick="showDish('mood')">😊 Uplift Mood</button>
+            <button class="option-btn" onclick="showDish('detox')">🍋 Detox & Refresh</button>
+            <button class="option-btn" onclick="showDish('weight')">⚖️ Manage Weight</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="suggestionModal" class="modal-overlay hidden">
+    <div class="modal-content">
+      <button class="modal-close-btn" onclick="closeSuggestionModal()">&times;</button>
+      <h3 id="modalTitle">Your Meal Suggestion</h3>
+      <div id="modalText"></div>
+      <button class="modal-footer-btn" onclick="closeSuggestionModal()">Got it!</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UMEED - Hope, Empowerment & Wellness Platform</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header & Navigation -->
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="umeed.png" alt="UMEED Logo" />
+          <span class="logo-main">UMEED</span>
+          <span class="logo-sub">Hope & Empowerment Platform</span>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#homePage">Home</a></li>
+          <li><a href="#modulesSection">Services</a></li>
+          <li><a href="#stressSection">Stress Help</a></li>
+          <li><a href="#downloadSection">Download</a></li>
+          <li><a href="#contactSection">Contact</a></li>
+        </ul>
+        <div class="auth-buttons">
+          <button id="login-btn" class="login-btn">Login</button>
+          <button id="signup-btn" class="signup-btn">Sign Up</button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section class="hero" id="homePage">
+        <video autoplay muted loop playsinline class="hero-video">
+          <source src="sun.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-decorations">
+          <svg
+            class="hero-svg-1"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="50"
+              cy="50"
+              r="40"
+              fill="none"
+              stroke="rgba(255,255,255,0.3)"
+              stroke-width="2"
+            />
+            <circle
+              cx="50"
+              cy="50"
+              r="20"
+              fill="none"
+              stroke="rgba(255,255,255,0.2)"
+              stroke-width="1"
+            />
+          </svg>
+          <svg
+            class="hero-svg-2"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polygon
+              points="50,10 90,90 10,90"
+              fill="none"
+              stroke="rgba(255,255,255,0.2)"
+              stroke-width="2"
+            />
+          </svg>
+          <svg
+            class="hero-svg-3"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              x="20"
+              y="20"
+              width="60"
+              height="60"
+              fill="none"
+              stroke="rgba(255,255,255,0.15)"
+              stroke-width="2"
+              rx="10"
+            />
+          </svg>
+        </div>
+        <div class="hero-content">
+          <h1>🌟 UMEED 🌟</h1>
+          <p>💫 Hope, Empowerment & Wellness Platform</p>
+          <p>
+            🤝 Supporting women, rural communities, and individuals on their
+            journey to mental wellness and recovery
+          </p>
+          <button class="cta-button" id="exploreModulesBtn">
+            🚀 Explore Our Modules
+          </button>
+        </div>
+      </section>
+
+      <!-- Modules -->
+      <section class="modules" id="modulesSection">
+        <h2>🛠️ Our Support Modules</h2>
+        <div
+          class="module-grid"
+          style="
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1100px;
+            margin: 0 auto;
+          "
+        >
+          <div
+            class="module-card"
+            data-module="addiction"
+            style="min-width: 300px; flex: 1 1 320px; max-width: 350px"
+          >
+            <div class="module-icon" style="font-size: 2.5rem">❤️‍🩹</div>
+            <h3>Addiction Help</h3>
+            <p>🔄 Recovery and mental wellness support</p>
+          </div>
+          <div
+            class="module-card"
+            data-module="stress"
+            style="min-width: 300px; flex: 1 1 320px; max-width: 350px"
+          >
+            <div class="module-icon" style="font-size: 2.5rem">🧘</div>
+            <h3>Stress Management</h3>
+            <p>😌 Personalized stress relief and coping strategies</p>
+          </div>
+
+          <div
+            class="module-card"
+            data-module="nutrition"
+            style="min-width: 300px; flex: 1 1 320px; max-width: 350px"
+          >
+            <div class="module-icon" style="font-size: 2.5rem">🍎</div>
+            <h3>Nutrition & Diet</h3>
+            <p>🥗 Balanced meal tips for mental and physical wellness</p>
+          </div>
+          <div
+            class="module-card"
+            data-module="chronic"
+            style="min-width: 300px; flex: 1 1 320px; max-width: 350px"
+          >
+            <div class="module-icon" style="font-size: 2.5rem">💊</div>
+            <h3>Chronic Illness Care</h3>
+            <p>🩺 Support for diabetes, hypertension, and asthma</p>
+          </div>
+          <div
+            class="module-card"
+            data-module="esteem"
+            style="min-width: 300px; flex: 1 1 320px; max-width: 350px"
+          >
+            <div class="module-icon" style="font-size: 2.5rem">💖</div>
+            <h3>Self-Esteem & Body Positivity</h3>
+            <p>🌸 Encouraging confidence and self-love</p>
+          </div>
+          <div
+            class="module-card"
+            data-module="fitness"
+            style="min-width: 300px; flex: 1 1 320px; max-width: 350px"
+          >
+            <div class="module-icon" style="font-size: 2.5rem">💪</div>
+            <h3>Physical Fitness & BMI Tracker</h3>
+            <p>🏃‍♀️ Exercise tips, posture care, and body health tools</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Review Section -->
+      <section id="reviewSection" class="reviews">
+        <h2>💬 What People Say About UMEED</h2>
+        <div id="autoScrollReviews" class="review-scroll">
+          <div class="review-card">
+            <img
+              src="https://images.pexels.com/photos/1456951/pexels-photo-1456951.jpeg"
+              alt="Priya Sharma"
+            />
+            <p>
+              “UMEED helped me regain confidence and mental balance. Forever
+              grateful!”
+            </p>
+            <h4>– Priya Sharma</h4>
+          </div>
+
+          <div class="review-card">
+            <img
+              src="https://images.pexels.com/photos/1456951/pexels-photo-1456951.jpeg"
+              alt="Neha Verma"
+            />
+            <p>
+              “The Saheli Connect community feels like a family. It’s a safe
+              space for everyone.”
+            </p>
+            <h4>– Neha Verma</h4>
+          </div>
+
+          <div class="review-card">
+            <img
+              src="https://images.pexels.com/photos/1456951/pexels-photo-1456951.jpeg"
+              alt="Rohan Singh"
+            />
+            <p>
+              “Stress management module changed my life — simple yet powerful
+              methods.”
+            </p>
+            <h4>– Rohan Singh</h4>
+          </div>
+
+          <div class="review-card">
+            <img
+              src="https://images.pexels.com/photos/1456951/pexels-photo-1456951.jpeg"
+              alt="Anjali Gupta"
+            />
+            <p>
+              “Love the positivity and hope this platform brings. A true friend
+              in tough times.”
+            </p>
+            <h4>– Anjali Gupta</h4>
+          </div>
+
+          <div class="review-card">
+            <img
+              src="https://images.pexels.com/photos/1456951/pexels-photo-1456951.jpeg"
+              alt="Vivek Kumar"
+            />
+            <p>
+              “A perfect example of how technology can uplift rural
+              communities!”
+            </p>
+            <h4>– Vivek Kumar</h4>
+          </div>
+        </div>
+      </section>
+
+      <!-- Download Section -->
+      <section class="coming-soon-section" id="downloadSection">
+        <div class="coming-soon-box">
+          <h3>📱 COMING SOON 📱</h3>
+          <p>🚧 Our mobile app is under development</p>
+          <p>🌟 Get ready to access UMEED support anytime, anywhere</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Chatbot Widget -->
+    <div id="chatbotWidget" class="chatbot-widget">
+      <button id="chatbotToggle" class="chatbot-toggle">
+        <img
+          src="https://api.dicebear.com/7.x/bottts/svg?seed=UdaanBot&backgroundColor=8B4513"
+          alt="Chatbot"
+          class="chatbot-avatar"
+        />
+        <div class="online-badge">Online</div>
+      </button>
+      <div id="chatbotWindow" class="chatbot-window hidden">
+        <div class="chatbot-header">
+          <h3>🤖 UMEED Assistant</h3>
+          <button id="chatbotClose" class="chatbot-close-btn">&times;</button>
+        </div>
+        <div id="chatbotMessages" class="chatbot-messages">
+          <div class="chatbot-message bot-message">
+            <div class="message-content">
+              👋 Hello! I'm your UMEED assistant. How can I help you today?
+            </div>
+          </div>
+        </div>
+        <div class="chatbot-input-area">
+          <input
+            type="text"
+            id="chatbotInput"
+            class="chatbot-input"
+            placeholder="Type your message..."
+          />
+          <button id="chatbotSend" class="chatbot-send-btn">
+            <img src="arow.png" alt="send" />
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contactSection" class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>🌟 UMEED</h3>
+          <p>💫 Hope, Empowerment & Wellness Platform</p>
+          <p>🚀 Your journey to wellness starts here</p>
+        </div>
+        <div class="footer-section" style="text-align: right">
+          <h3>📞 Contact Us</h3>
+          <p>📱 1452 235 1463</p>
+          <p>📧 umeed@gmail.com</p>
+          <p>👥 AYUSH OJHA / ADITYA</p>
+        </div>
+      </div>
+      <p
+        style="
+          text-align: center;
+          margin-top: 2rem;
+          padding-top: 2rem;
+          border-top: 1px solid rgba(255, 255, 255, 0.2);
+        "
+      >
+        © 2025 UMEED - All Rights Reserved
+      </p>
+    </footer>
+    <!-- Smooth Scroll via Lenis -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.28/dist/lenis.min.js"></script>
+    <script>
+      // Initialize Lenis smooth scrolling
+      const lenis = new Lenis({
+        duration: 1.2, // smoothness speed (1.0–2.0 is best)
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // smooth exponential easing
+        smoothWheel: true,
+        smoothTouch: false,
+      });
+
+      // Animation frame loop to update scroll
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
+      requestAnimationFrame(raf);
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
