@@ -1,0 +1,91 @@
+/* selfesteem.css — uses same look & feel as management.css (glass + gradient + animations) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+:root{
+  --bg1:#3b0066; --bg2:#5c007a; --bg3:#7b1fa2;
+  --glass: rgba(255,255,255,0.95);
+  --muted: #2c3e50;
+  --accent: #667eea;
+  --soft:#f6f3ff;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;font-family:"Inter",sans-serif;
+  background: linear-gradient(135deg,var(--bg1),var(--bg2),var(--bg3));
+  color:#fff;min-height:100vh;display:flex;flex-direction:column;
+  background-size:300% 300%;animation: gradientBG 15s ease-in-out infinite;
+}
+@keyframes gradientBG{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+
+/* nav */
+.simple-nav{display:flex;align-items:center;gap:1rem;padding:1rem 2rem;background:rgba(255,255,255,0.08);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.2)}
+.back-btn{background:linear-gradient(90deg,#ff6b6b,#ff8c69);border:none;color:#fff;padding:.5rem 1.2rem;border-radius:8px;font-weight:600;cursor:pointer}
+.nav-title-wrap{display:flex;flex-direction:column}
+.nav-animated{margin:0;font-size:1.05rem;font-weight:700;animation:floating 4s ease-in-out infinite, glowNav 3.6s ease-in-out infinite;color:#fff;text-shadow:0 2px 24px rgba(102,118,234,0.08)}
+.nav-sub{margin:0;font-size:.78rem;opacity:.9;color:#e9ddff;transform:translateY(-2px)}
+@keyframes glowNav{0%{text-shadow:0 2px 6px rgba(120,86,200,0.08)}50%{text-shadow:0 6px 24px rgba(120,86,200,0.24)}100%{text-shadow:0 2px 6px rgba(120,86,200,0.08)}}
+@keyframes floating{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+
+/* layout */
+.module-page{flex:1;display:flex;align-items:flex-start;justify-content:center;padding:3.5rem 1rem}
+.esteem-container{width:100%;max-width:980px;background:var(--glass);color:var(--muted);border-radius:22px;padding:2.4rem;box-shadow:0 20px 50px rgba(0,0,0,0.14);border:1px solid rgba(255,255,255,0.12);animation:fadeInUp .9s both}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.esteem-container h2{text-align:center;margin:0 0.2rem 0.25rem;color:var(--muted);font-size:1.8rem}
+.lead{text-align:center;color:#5b4a73;margin-bottom:1rem;font-style:italic}
+
+/* cards */
+.card{background:linear-gradient(180deg,#fff,#fbfbff);border-radius:14px;padding:1rem;margin:0.8rem 0;color:var(--muted);box-shadow:0 12px 30px rgba(0,0,0,0.08);border:1px solid rgba(64,0,64,0.04)}
+.row{display:flex;align-items:center}
+.gap{gap:0.8rem}
+.two-up{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+@media (max-width:880px){.two-up{grid-template-columns:1fr}}
+
+/* mirror card */
+.mirror-card textarea{width:100%;min-height:82px;border-radius:10px;padding:0.75rem;border:1px solid #e3dff4;resize:none;font-family:inherit}
+.small{font-size:.9rem;color:#0f6b8c}
+.muted{color:#6e6b80;font-size:.95rem}
+
+/* meter */
+.meter-wrap{display:flex;flex-direction:column;gap:.6rem}
+.meter-bar{width:100%;height:14px;background:#f1ecff;border-radius:999px;padding:2px;border:1px solid rgba(64,0,64,0.03)}
+.meter-fill{height:100%;width:0%;background:linear-gradient(90deg,var(--accent),#9b6bff);border-radius:999px;transition:width .6s ease}
+.meter-labels{font-size:.95rem;color:#4b4b59;display:flex;justify-content:space-between;align-items:center}
+
+/* tasks */
+.task-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.5rem}
+.task-list li{background:#fff;padding:.6rem;border-radius:10px;border:1px solid rgba(64,0,64,0.03);display:flex;align-items:center;gap:.6rem}
+.task-list li.done{background:linear-gradient(90deg,#e6fff9,#eef9ff);border-color:rgba(0,180,216,0.12);transform:translateY(-2px);box-shadow:0 8px 18px rgba(0,180,216,0.06)}
+.task-list input[type="checkbox"]{transform:scale(1.1);margin-right:.4rem}
+
+/* affirmations */
+.affirm-wrap{display:flex;flex-direction:column;align-items:flex-start;gap:.6rem}
+.affirm-box{min-height:48px;background:linear-gradient(180deg,#fff,#fbfeff);border-radius:8px;padding:.6rem;border:1px solid rgba(64,0,64,0.03);color:var(--muted);width:100%}
+
+/* detox */
+.detox-canvas{position:relative;min-height:64px;overflow:hidden}
+.detox-canvas .float-text{position:absolute;left:50%;transform:translateX(-50%);font-weight:600;padding:.4rem .7rem;border-radius:999px;background:linear-gradient(90deg,#ffd6e8,#f1e4ff);color:#3b0d2b;opacity:0.95;animation:floatUp 2.2s ease forwards}
+@keyframes floatUp{0%{transform:translate(-50%,0);opacity:1}100%{transform:translate(-50%,-90px);opacity:0}}
+
+/* info & closing */
+.info-card p{margin:0}
+.closing-card .affirm{font-weight:700;color:var(--muted);font-size:1.05rem}
+
+/* buttons */
+.cta{background:linear-gradient(90deg,#667eea,#8e5ffb);color:#ffffff;padding:.6rem 1rem;border-radius:14px;border:none;cursor:pointer;font-weight:700}
+.ghost{background:transparent;border:1px solid rgba(64,0,64,0.05);padding:.5rem 0.9rem;border-radius:12px;cursor:pointer}
+.linklike{background:none;border:none;color:var(--accent);cursor:pointer;font-weight:700}
+
+/* modal */
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center;z-index:1200}
+.modal-content{background:#fff;color:var(--muted);padding:1.2rem;border-radius:14px;max-width:720px;width:92%;box-shadow:0 20px 60px rgba(0,0,0,0.3)}
+.modal-close-btn{position:absolute;right:18px;top:14px;background:none;border:none;font-size:1.1rem;cursor:pointer}
+
+/* journal */
+.journal-list{display:grid;gap:.6rem;max-height:48vh;overflow:auto;padding-right:.4rem}
+.journal-item{background:linear-gradient(180deg,#fff,#f8fbff);padding:.8rem;border-radius:10px;border:1px solid rgba(64,0,64,0.04);display:flex;justify-content:space-between;align-items:flex-start;gap:.8rem}
+.journal-meta{font-size:.8rem;color:#6b6a7b}
+
+/* utilities */
+.hidden{display:none}

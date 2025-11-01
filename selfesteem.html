@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Self-Esteem & Body Positivity - UMEED</title>
+  <link rel="stylesheet" href="selfesteem.css" />
+  <script src="selfesteem.js" defer></script>
+</head>
+<body>
+  <header>
+    <nav class="simple-nav">
+      <button onclick="window.location.href='index.html'" class="back-btn">← Back</button>
+      <div class="nav-title-wrap">
+        <h2 class="nav-animated">💖 Self-Esteem & Body Positivity</h2>
+        <p class="nav-sub">Love the person in your mirror</p>
+      </div>
+    </nav>
+  </header>
+
+  <main class="module-page">
+    <section class="esteem-section">
+      <div class="esteem-container">
+        <h2>🌸 The Mirror Within</h2>
+        <p class="lead">A gentle space for reflection, confidence, and self-kindness.</p>
+
+        <!-- mirror message -->
+        <div class="card mirror-card">
+          <h3>🪞 Mirror Message</h3>
+          <p class="muted">Write one honest thing you like or appreciate about yourself today.</p>
+          <textarea id="mirrorInput" placeholder="I appreciate my resilience..." maxlength="320"></textarea>
+          <div class="row gap">
+            <button class="cta" id="saveMirrorBtn">Save to Mirror Journal</button>
+            <button class="ghost" id="viewJournalBtn">📔 View My Mirror Journal</button>
+            <span id="mirrorSaved" class="small hidden">Saved ✓</span>
+          </div>
+        </div>
+
+        <!-- confidence meter & tasks -->
+        <div class="row two-up">
+          <div class="card meter-card">
+            <h3>✨ Confidence Meter</h3>
+            <div class="meter-wrap">
+              <div id="meterBar" class="meter-bar"><div id="meterFill" class="meter-fill"></div></div>
+              <div class="meter-labels"><span id="meterPct">0%</span> progress</div>
+            </div>
+            <p class="muted">Complete small, kind tasks — each tick gently fills your meter.</p>
+          </div>
+
+          <div class="card tasks-card">
+            <h3>🌟 Daily Kind Tasks</h3>
+            <ul class="task-list" id="taskList">
+              <li data-id="c1"><label><input type="checkbox" onchange="toggleTask('c1')"> Smile at one person today</label></li>
+              <li data-id="c2"><label><input type="checkbox" onchange="toggleTask('c2')"> Say a kind thing to yourself out loud</label></li>
+              <li data-id="c3"><label><input type="checkbox" onchange="toggleTask('c3')"> Stand tall for 1 minute when you walk</label></li>
+              <li data-id="c4"><label><input type="checkbox" onchange="toggleTask('c4')"> Thank one body part for what it does</label></li>
+            </ul>
+            <div class="row gap small">
+              <button class="linklike" onclick="clearDailyTasks()">Clear tasks</button>
+              <span id="taskSaved" class="small hidden">✔️ Saved</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- affirmations + detox -->
+        <div class="row two-up">
+          <div class="card aff-card">
+            <h3>💬 Need a Boost?</h3>
+            <p class="muted">Click for a calm affirmation.</p>
+            <div class="affirm-wrap">
+              <button class="cta" id="affBtn">💫 Inspire me</button>
+              <div id="affBox" class="affirm-box"></div>
+            </div>
+          </div>
+
+          <div class="card detox-card">
+            <h3>☁️ Negative Thought Detox</h3>
+            <p class="muted">Type a negative thought — release it, then watch it reframe.</p>
+            <input id="detoxInput" placeholder="I always mess up..." />
+            <p></p>
+            <div class="row gap">
+              <button class="cta" id="detoxBtn">Release & Reframe</button>
+              <span id="detoxMessage" class="small muted"></span>
+            </div>
+            <div id="detoxCanvas" class="detox-canvas" aria-hidden="true"></div>
+          </div>
+        </div>
+
+        <!-- shy vs introvert + personality quick -->
+        <div class="card info-card">
+          <h3>❗ Shy ≠ Introvert</h3>
+          <p><strong>Shy</strong> = anxious about being judged in social moments. <strong>Introvert</strong> = prefers quieter time to recharge. You can be shy extrovert or confident introvert — both valid.</p>
+          <div class="row gap" style="margin-top:0.8rem;">
+            <button class="ghost" onclick="openPersonality()">Discover your style</button>
+            <div id="personalityResult" class="muted small"></div>
+          </div>
+        </div>
+
+        <!-- closing / affirmation -->
+        <div class="card closing-card">
+          <h3>🕊️ Gentle Reminder</h3>
+          <p class="affirm big">You are not measured by your silence or your noise — but by your kindness to yourself.</p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Mirror Journal Modal -->
+  <div id="journalModal" class="modal-overlay hidden" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close-btn" onclick="closeJournal()">✖</button>
+      <h3>📔 Mirror Journal</h3>
+      <div id="journalList" class="journal-list"></div>
+      <div class="row gap" style="margin-top:1rem;">
+        <button class="cta" onclick="clearJournal()">Clear Journal</button>
+        <button class="ghost" onclick="closeJournal()">Close</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
